@@ -18,26 +18,47 @@ export default function Contact() {
       </p>
       <br />
 
-      <p className="flex items-center gap-4">
-        Find me:{" "}
-        <span className="flex gap-3">
-          {[
-            { icon: FaGithub, label: "GitHub" },
-            { icon: FaXTwitter, label: "Twitter" },
-            { icon: FaLinkedin, label: "LinkedIn" },
-            { icon: IoDocument, label: "Resume" },
-          ].map(({ icon: Icon, label }) => (
-            <Link
-              key={label}
-              href="#"
-              className="text-gray-500  hover:text-lime-300 transition-colors"
-            >
-              <Icon className="w-6 h-6" />
-              <span className="sr-only">{label}</span>
-            </Link>
-          ))}
-        </span>
-      </p>
+      <div className="flex items-center gap-4">
+        <div className="space-y-1">
+          Find me:{" "}
+          <span className="flex sm:flex-row flex-col gap-3 pt-2">
+            {socials.map(({ icon: Icon, label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                className="flex items-center text-white hover:text-lime-300 transition-colors gap-2"
+              >
+                [
+                <Icon className="w-6 h-6" />
+                <span className="text-gray-400">{label}</span> ]
+              </Link>
+            ))}
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
+
+const socials = [
+  {
+    icon: FaGithub,
+    label: "GitHub",
+    href: "https://github.com/ojuss",
+  },
+  {
+    icon: FaXTwitter,
+    label: "Twitter",
+    href: "https://twitter.com/ojuss",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/ojuss",
+  },
+  {
+    icon: IoDocument,
+    label: "Resume",
+    href: "/path/to/resume.pdf",
+  },
+];

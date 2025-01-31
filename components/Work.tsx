@@ -1,42 +1,18 @@
 import Link from "next/link";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 interface TimelineEntry {
   company: string;
   role: string;
   startDate: string;
   endDate: string;
+  description: string;
+  link: string;
   isCurrent?: boolean;
 }
 
 export default function Timeline() {
-  const experiences: TimelineEntry[] = [
-    {
-      company: "FLIB",
-      role: "Frontend Engineer",
-      startDate: "Oct 2025",
-      endDate: "Present",
-      isCurrent: true,
-    },
-    {
-      company: "Noviga Automation",
-      role: "Frontend Developer Intern",
-      startDate: "Sept 2024",
-      endDate: "Oct 2024",
-    },
-    {
-      company: "Meta Craftlabs",
-      role: "Full Stack Developer Intern",
-      startDate: "Jun 2024",
-      endDate: "Jul 2024",
-    },
-    {
-      company: "Google Developer Student Club IKGPTU",
-      role: "Core Team Member",
-      startDate: "Aug 2023",
-      endDate: "Aug 2024",
-    },
-  ];
-
+  
   return (
     <div id="work" className="pt-16 space-y-4">
       <h2 className="text-2xl font-bold text-lime-500 text-transparent hover:bg-gray-800 inline-block">
@@ -55,7 +31,7 @@ export default function Timeline() {
                 className={`w-4 h-4 rounded-full border-2 mt-1.5 z-10 
                     ${
                       experience.isCurrent
-                        ? "border-lime-400 bg-lime-500"
+                        ? "border-lime-500 bg-lime-600"
                         : "border-gray-600 bg-gray-900"
                     }`}
               />
@@ -63,14 +39,31 @@ export default function Timeline() {
               {/* Content */}
               <div className="flex-1 flex justify-between items-start min-w-0">
                 <div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                     {experience.company}
+                    <Link
+                      href={experience.link}
+                      target="_blank"
+                      className="text-lime-500 hover:text-2xl duration-300"
+                    >
+                      <CiLocationArrow1 />
+                    </Link>
                   </h3>
-                  <p className="text-gray-400 mt-1">{experience.role}</p>
+                  <p className="text-gray-400 mt-1 italic">{experience.role}</p>
+                  <p className="text-gray-300 md:hidden">
+                    {" "}
+                    {experience.startDate} - {experience.endDate}
+                  </p>
+                  <br />
+                  <p className="text-gray-300 mt-1 hidden md:block">
+                    {experience.description}
+                  </p>
                 </div>
-                <p className="text-gray-500 text-right ml-4">
-                  {experience.startDate} - {experience.endDate}
-                </p>
+                <div className="hidden md:flex flex-col md:text-right whitespace-nowrap">
+                  <p className="text-gray-300 ml-4 md:ml-0">
+                    {experience.startDate} - {experience.endDate}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -79,3 +72,43 @@ export default function Timeline() {
     </div>
   );
 }
+
+const experiences: TimelineEntry[] = [
+  {
+    company: "FLIB",
+    role: "Frontend Engineer",
+    description:
+      "As a frontend engineer, I am working to implement new features, UI components, DB management and refactoring codebase for better SEO and SERPs.",
+    startDate: "Oct 2024",
+    endDate: "Present",
+    isCurrent: true,
+    link: "https://flib.store",
+  },
+  {
+    company: "Noviga Automation",
+    role: "Frontend Developer",
+    description:
+      "Understanding client's requirements to develop an internal asset management system.",
+    startDate: "Sept 2024",
+    endDate: "Oct 2024",
+    link: "https://www.noviga.tech/",
+  },
+  {
+    company: "Meta CraftLab",
+    role: "Full Stack Developer Intern",
+    description:
+      "Collaborated in building a physical Meta CraftLab product </devstar> a developer toolkit.",
+    startDate: "Jun 2024",
+    endDate: "Jul 2024",
+    link: "https://craftlab.ai/",
+  },
+  {
+    company: "Google Developer Student Club IKGPTU",
+    role: "Core Team Member",
+    description:
+      "During my time in GDSC, I had a chance to collaborate with my team on front-end projects and also help in organizing as well as participating in workshops/ events.",
+    startDate: "Aug 2023",
+    endDate: "Aug 2024",
+    link: "https://www.linkedin.com/company/gdsc-ikgptu/",
+  },
+];
