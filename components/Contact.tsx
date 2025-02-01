@@ -26,6 +26,7 @@ export default function Contact() {
               <Link
                 key={label}
                 href={href}
+                target="_blank"
                 className="flex items-center text-white hover:text-lime-300 transition-colors gap-2"
               >
                 [
@@ -49,7 +50,7 @@ const socials = [
   {
     icon: FaXTwitter,
     label: "Twitter",
-    href: "https://twitter.com/ojuss",
+    href: "https://twitter.com/ojussw",
   },
   {
     icon: FaLinkedin,

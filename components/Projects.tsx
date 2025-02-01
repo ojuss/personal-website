@@ -4,7 +4,7 @@ import ProjectGrid from "@/components/ProjectGrid";
 export default function Projects() {
   return (
     <section id="projects" className="pt-16 space-y-4">
-      <h2 className="text-2xl font-bold text-lime-500 text-transparent hover:bg-gray-800 inline-block">
+      <h2 className="text-2xl font-bold text-lime-400 text-transparent hover:bg-gray-800 inline-block">
         [ Projects ]
       </h2>
 

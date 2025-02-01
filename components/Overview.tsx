@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Overview() {
   return (
     <>
-      <h1 className="text-5xl font-bold text-lime-500">[ ojus ]</h1>
+      <h1 className="text-5xl font-bold text-lime-400">[ ojus ]</h1>
 
       <p className="leading-relaxed text-white">
         Hello world! I'm Ojus, a computer science undergrad @ Punjab Technical
