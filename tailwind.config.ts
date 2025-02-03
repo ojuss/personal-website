@@ -11,6 +11,9 @@ const config: Config = {
       backgroundColor: {
         'default': '#fafafa',
       },
+      colors: {
+        background: 'hsl(var(--background))',
+      }
     },
   },
   darkMode: 'class',
