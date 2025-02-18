@@ -30,7 +30,7 @@ export default function Contact() {
                 className="flex items-center text-white hover:text-lime-300 transition-colors gap-2"
               >
                 [
-                <Icon className="w-6 h-6" />
+                <Icon className="w-6 h-6"/>
                 <span className="text-gray-400">{label}</span> ]
               </Link>
             ))}
@@ -49,7 +49,7 @@ const socials = [
   },
   {
     icon: FaXTwitter,
-    label: "Twitter",
+    label: "X.com",
     href: "https://twitter.com/ojussw",
   },
   {
@@ -60,6 +60,6 @@ const socials = [
   {
     icon: IoDocument,
     label: "Resume",
-    href: "/path/to/resume.pdf",
+    href: "../public/ojusfebruarycv.pdf",   
   },
 ];

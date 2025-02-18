@@ -21,7 +21,7 @@ export default function Overview() {
               <Link
                 key={item}
                 href={`#${item.toLowerCase().replace("!", "")}`}
-                className="block text-gray-400 hover:text-lime-400 hover:bg-gray-800 relative group w-fit"
+                className="block text-gray-400 hover:text-lime-400 hover:bg-gray-800 relative group w-fit duration-200"
               >
                 <span className="relative z-10">[{item}]</span>
                 <span className="absolute inset-0 bg-violet-100 scale-x-0 rounded-sm" />

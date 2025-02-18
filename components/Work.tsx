@@ -15,7 +15,7 @@ export default function Timeline() {
   
   return (
     <div id="work" className="pt-16 space-y-4">
-      <h2 className="text-2xl font-bold text-lime-400 text-transparent hover:bg-gray-800 inline-block">
+      <h2 className="text-2xl font-bold text-lime-400 hover:bg-gray-800 inline-block">
         [ Work ]
       </h2>
       <div className="relative">
