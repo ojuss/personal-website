@@ -5,7 +5,7 @@ import { useState } from "react"
 import AI from "@/public/gomini.png"
 import Collabdoor from "@/public/collabdoor.png"
 import Stripe from "@/public/stripe-gateway.png"
-import Illustration from "@/public/illustrations.png"
+
 
 import type { StaticImageData } from "next/image"
 
@@ -152,7 +152,7 @@ const projects = [
     description: "A modern portfolio website for a scientific illustrator.",
     longDescription:
       "A comprehensive implementation of Stripe's Payment Intent API integrated with a Go backend. This project showcases secure payment processing, webhook handling, and best practices for implementing payment flows in web applications.",
-    cover: Illustration,
+    cover: "",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://oshgupta.com",
