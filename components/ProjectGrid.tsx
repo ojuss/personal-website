@@ -9,7 +9,6 @@ import Illustration from "@/public/illustrations.png"
 
 import type { StaticImageData } from "next/image"
 
-
 interface ProjectCardProps {
   projectTitle: string
   description: string
@@ -159,7 +158,7 @@ const projects = [
     url: "https://oshgupta.com",
     technologies: ["Next.js", "CMS", "Tailwind CSS"],
   },
-  // ... add your other projects here
+  
 ]
 
 export default function ProjectGrid() {
