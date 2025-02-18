@@ -2,18 +2,12 @@
 
 import Image from "next/image"
 import { useState } from "react"
-import AI from "@/public/gomini.png"
-import Collabdoor from "../public/collabdoor.png"
-import Stripe from "../public/stripe-gateway.png"
-import Illustrate from "../public/illustrations.png"
 
-
-import type { StaticImageData } from "next/image"
 
 interface ProjectCardProps {
   projectTitle: string
   description: string
-  cover: string | StaticImageData
+  cover: string
   coverWidth: number
   coverHeight: number
   url: string
@@ -120,7 +114,7 @@ const projects = [
     description: "A Go backend API with Gemini 1.5 to generate response based on users prompt.",
     longDescription:
       "Gomini is a powerful backend API built with Go that leverages Google's Gemini 1.5 AI model to generate intelligent responses based on user prompts. The API handles natural language processing tasks efficiently and provides accurate, context-aware responses.",
-    cover: AI,
+    cover: "/gomini.png",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://github.com/ojuss/gemini-go",  
@@ -131,7 +125,7 @@ const projects = [
     description: "Demonstration of how to integrate Stripe Payment API with a Go backend.",
     longDescription:
       "A comprehensive implementation of Stripe's Payment Intent API integrated with a Go backend. This project showcases secure payment processing, webhook handling, and best practices for implementing payment flows in web applications.",
-    cover: Stripe,
+    cover: "/stripe-gateway.png",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://github.com/ojuss/stripe-payment-intent",
@@ -142,7 +136,7 @@ const projects = [
     description: "Helping students with course relevant resources.",
     longDescription:
       "Collabdoor is an educational platform designed to help students find and share course-relevant resources. It features a collaborative environment where students can upload, discover, and discuss learning materials specific to their courses.",
-    cover: Collabdoor,
+    cover: "/collabdoor.png",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://collabdoor.github.io/dumbAF/",
@@ -153,7 +147,7 @@ const projects = [
     description: "A modern portfolio website for a scientific illustrator.",
     longDescription:
       "A comprehensive implementation of Stripe's Payment Intent API integrated with a Go backend. This project showcases secure payment processing, webhook handling, and best practices for implementing payment flows in web applications.",
-    cover: Illustrate,
+    cover: "/illustrations.png",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://oshgupta.com",
