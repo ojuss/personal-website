@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useState } from "react"
 import AI from "@/public/gomini.png"
-import Collabdoor from "@/public/Collabdoor.png"
+import Collabdoor from "@/public/collabdoor.png"
 import Stripe from "@/public/stripe-gateway.png"
 import Illustration from "@/public/illustrations.png"
 
