@@ -3,8 +3,9 @@
 import Image from "next/image"
 import { useState } from "react"
 import AI from "@/public/gomini.png"
-import Collabdoor from "@/public/collabdoor.png"
-import Stripe from "@/public/stripe-gateway.png"
+import Collabdoor from "../public/collabdoor.png"
+import Stripe from "../public/stripe-gateway.png"
+import Illustrate from "../public/illustrations.png"
 
 
 import type { StaticImageData } from "next/image"
@@ -45,7 +46,7 @@ function ProjectModal({
 
           <div className="relative w-full aspect-video">
             <Image
-              src={project.cover || "/placeholder.svg"}
+              src={project.cover}
               alt={project.projectTitle}
               fill
               className="object-cover rounded-lg"
@@ -91,7 +92,7 @@ function ProjectCard(props: ProjectCardProps) {
       <article role="listitem" className="h-[140px] cursor-pointer" onClick={() => setIsModalOpen(true)}>
         <div className="flex flex-row items-start p-2.5 border bg-white  h-full hover:bg-gray-300 transition-colors">
           <Image
-            src={props.cover || "/placeholder.svg"}
+            src={props.cover}
             alt={`${props.projectTitle} cover`}
             width={props.coverWidth}
             height={props.coverHeight}
@@ -152,7 +153,7 @@ const projects = [
     description: "A modern portfolio website for a scientific illustrator.",
     longDescription:
       "A comprehensive implementation of Stripe's Payment Intent API integrated with a Go backend. This project showcases secure payment processing, webhook handling, and best practices for implementing payment flows in web applications.",
-    cover: "",
+    cover: Illustrate,
     coverWidth: 320,
     coverHeight: 780,
     url: "https://oshgupta.com",

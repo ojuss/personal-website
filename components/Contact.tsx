@@ -60,6 +60,6 @@ const socials = [
   {
     icon: IoDocument,
     label: "Resume",
-    href: "../public/ojusfebruarycv.pdf",   
+    href: "/ojuscv.pdf",   
   },
 ];
