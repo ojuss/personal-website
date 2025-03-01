@@ -6,7 +6,7 @@ interface TimelineEntry {
   role: string;
   startDate: string;
   endDate: string;
-  description: string;
+  description?: string;
   link: string;
   isCurrent?: boolean;
 }
@@ -23,7 +23,7 @@ export default function Timeline() {
         <div className="absolute left-[7px] top-3 bottom-3 w-[2px] bg-gray-700" />
 
         {/* Timeline entries */}
-        <div className="space-y-8">
+        <div className="space-y-4">
           {experiences.map((experience, index) => (
             <div key={index} className="relative flex items-start gap-6">
               {/* Dot */}
@@ -55,9 +55,9 @@ export default function Timeline() {
                     {experience.startDate} - {experience.endDate}
                   </p>
                   <br />
-                  <p className="text-gray-300 mt-1 hidden md:block">
+                  {/* <p className="text-gray-300 mt-1 hidden md:block">
                     {experience.description}
-                  </p>
+                  </p> */}
                 </div>
                 <div className="hidden md:flex flex-col md:text-right whitespace-nowrap">
                   <p className="text-gray-300 ml-4 md:ml-0">
@@ -75,20 +75,29 @@ export default function Timeline() {
 
 const experiences: TimelineEntry[] = [
   {
-    company: "FLIB",
-    role: "Frontend Engineer",
-    description:
-      "As a frontend engineer, I am working to implement new features, UI components, DB management and refactoring codebase for better SEO and SERPs.",
-    startDate: "Oct 2024",
+    company: "Hammer AI",
+    role: "Software Engineer",
+    // description:
+    //   "As a frontend engineer, I am working to implement new features, UI components, DB management and refactoring codebase for better SEO and SERPs.",
+    startDate: "Feb 2024",
     endDate: "Present",
     isCurrent: true,
+    link: "https://hammerai.com",
+  },
+  {
+    company: "FLIB",
+    role: "Frontend Engineer",
+    // description:
+    //   "As a frontend engineer, I am working to implement new features, UI components, DB management and refactoring codebase for better SEO and SERPs.",
+    startDate: "Oct 2024",
+    endDate: "Feb 2024",
     link: "https://flib.store",
   },
   {
     company: "Noviga Automation",
     role: "Frontend Developer",
-    description:
-      "Understanding client's requirements to develop an internal asset management system.",
+    // description:
+    //   "Understanding client's requirements to develop an internal asset management system.",
     startDate: "Sept 2024",
     endDate: "Oct 2024",
     link: "https://www.noviga.tech/",
@@ -96,8 +105,8 @@ const experiences: TimelineEntry[] = [
   {
     company: "Meta CraftLab",
     role: "Full Stack Developer Intern",
-    description:
-      "Collaborated in building a physical Meta CraftLab product </devstar> a developer toolkit.",
+    // description:
+    //   "Collaborated in building a physical Meta CraftLab product </devstar> a developer toolkit.",
     startDate: "Jun 2024",
     endDate: "Jul 2024",
     link: "https://craftlab.ai/",
@@ -105,8 +114,8 @@ const experiences: TimelineEntry[] = [
   {
     company: "Google Developer Student Club IKGPTU",
     role: "Core Team Member",
-    description:
-      "During my time in GDSC, I had a chance to collaborate with my team on front-end projects and also help in organizing as well as participating in workshops/ events.",
+    // description:
+    //   "During my time in GDSC, I had a chance to collaborate with my team on front-end projects and also help in organizing as well as participating in workshops/ events.",
     startDate: "Aug 2023",
     endDate: "Aug 2024",
     link: "https://www.linkedin.com/company/gdsc-ikgptu/",
