@@ -1,10 +1,15 @@
 import Contact from "./Contact";
 import Link from "next/link";
+import Pixelated from "./Pixelated";
 
 export default function Overview() {
   return (
-    <div id="overview" className="space-y-4">
-      <p className="text-4xl font-bold text-lime-400">[ ojus ]</p>
+    <div className="relative flex justify-center w-full -mt-28">
+   
+      <Pixelated />
+    
+      <div className="relative mt-[200px] space-y-4">
+      <h1 className="text-5xl font-bold text-lime-400">[ ojus ]</h1>
 
       <p className="leading-relaxed text-white">
         Hello world! I'm Ojus, a computer science undergrad{" "}
@@ -19,7 +24,7 @@ export default function Overview() {
       <div className="space-y-1 text-white">
         <p>On this page:</p>
         <nav className="space-y-1">
-          {["Projects!", "Work!", "About!", "Overview!"].map((item) => (
+          {["Projects!", "Work!", "About!"].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase().replace("!", "")}`}
@@ -36,13 +41,14 @@ export default function Overview() {
         I am currently a software engineer at{" "}
         <Link
           href="https://hammerai.com"
-          className="text-lime-200 relative hover:underline duration-200 group"
+          className="text-lime-200 relative underline group"
         >
           Hammer AI
         </Link>
         . Having worked with multiple startups in the past, I have gained
         significant experience in web development and design.
       </p>
+      </div>
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default function Timeline() {
         <div className="absolute left-[7px] top-3 bottom-3 w-[2px] bg-gray-700" />
 
         {/* Timeline entries */}
-        <div className="space-y-2">
+        <div className="space-y-4">
           {experiences.map((experience, index) => (
             <div key={index} className="relative flex items-start gap-6">
               {/* Dot */}
@@ -56,9 +56,9 @@ export default function Timeline() {
                     {experience.startDate} - {experience.endDate}
                   </p>
                   <br />
-                  <p className="text-gray-300 mt-1 hidden md:block">
+                  {/* <p className="text-gray-300 mt-1 hidden md:block">
                     {experience.description}
-                  </p>
+                  </p> */}
                 </div>
                 <div className="hidden md:flex flex-col md:text-right whitespace-nowrap">
                   <p className="text-gray-300 ml-4 md:ml-0">
