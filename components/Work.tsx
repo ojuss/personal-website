@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { CiLocationArrow1 } from "react-icons/ci";
-import { TiLocationArrow } from "react-icons/ti";
-import { FaLocationArrow } from "react-icons/fa";
+import { LuLink2 } from "react-icons/lu";
 
 interface TimelineEntry {
   company: string;
@@ -45,9 +43,9 @@ export default function Timeline() {
                     <Link
                       href={experience.link}
                       target="_blank"
-                      className="text-lime-400 hover:text-2xl duration-300"
+                      className="text-lime-200 hover:text-lime-400 "
                     >
-                      <FaLocationArrow height={2} width={2}/>
+                      <LuLink2 height={2} width={2}/>
                     </Link>
                   </h3>
                   <p className="text-gray-400 mt-1 italic">{experience.role}</p>

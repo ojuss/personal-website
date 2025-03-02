@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { MdOutlineClose } from "react-icons/md";
 import { IoUnlink } from "react-icons/io5";
+import { LuLink2 } from "react-icons/lu";
 
 interface ProjectCardProps {
   projectTitle: string
@@ -63,15 +64,14 @@ function ProjectModal({
               ))}
             </div>
           )}
-
           <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex justify-center gap-2 items-center text-lime-500 hover:underline"
+            className="inline-flex justify-center gap-2 items-center text-white"
           >
             
-            Visit Project <IoUnlink className="hover:underline"/> 
+            Visit project <LuLink2 className="text-lime-200 hover:text-lime-400 " height={8} width={8}/> 
           </a>
         </div>
       </div>
