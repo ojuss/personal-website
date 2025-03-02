@@ -11,7 +11,7 @@ export default function Contact() {
         Reach out:{" "}
         <Link
           href="mailto:guptaojas75@gmail.com"
-          className="text-gray-300 relative group underline"
+          className="text-gray-300 relative group hover:underline"
         >
           guptaojas75@gmail.com
         </Link>{" "}
@@ -30,7 +30,7 @@ export default function Contact() {
                 className="flex items-center text-white hover:text-lime-300 transition-colors gap-2"
               >
                 [
-                <Icon className="w-6 h-6"/>
+                <Icon className="w-6 h-6" />
                 <span className="text-gray-400">{label}</span> ]
               </Link>
             ))}
@@ -60,6 +60,6 @@ const socials = [
   {
     icon: IoDocument,
     label: "Resume",
-    href: "/ojuscv.pdf",   
+    href: "/ojuscv.pdf",
   },
 ];

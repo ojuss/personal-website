@@ -36,7 +36,7 @@ function ProjectModal({
         </button>
 
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-lime-400 ">[ {project.projectTitle} ]</h2>
+          <h2 className="text-2xl font-semibold text-lime-40000 ">[ {project.projectTitle} ]</h2>
 
           <div className="relative w-full aspect-video">
             <Image

@@ -5,11 +5,8 @@
 :root {
   --background: 0 0% 8%;
   --foreground: 213 31% 91%;
-  
 }
 
-
-  
 @keyframes rainbow-bg {
   0% {
     background-color: rgba(244, 114, 182, 0.2);
@@ -41,6 +38,6 @@ body {
 }
 
 ::selection {
-  background-color: rgba(139, 92, 246, 0.2); /* violet-500 with opacity */
+  background-color: rgba(169, 225, 175, 0.149); /* violet-500 with opacity */
   color: inherit;
 }
