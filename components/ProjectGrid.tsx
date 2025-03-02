@@ -2,7 +2,8 @@
 
 import Image from "next/image"
 import { useState } from "react"
-
+import { MdOutlineClose } from "react-icons/md";
+import { IoUnlink } from "react-icons/io5";
 
 interface ProjectCardProps {
   projectTitle: string
@@ -30,13 +31,13 @@ function ProjectModal({
       >
         <button
           onClick={onClose}
-          className="absolute right-4 top-4  text-gray-400 hover:text-white"
+          className="absolute right-4 top-4  text-gray-400 hover:text-white flex justify-center items-center"
         >
-          close
+          <MdOutlineClose className="h-4 w-4"/> close
         </button>
 
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-lime-40000 ">[ {project.projectTitle} ]</h2>
+          <h2 className="text-2xl font-semibold text-lime-400 ">{project.projectTitle}</h2>
 
           <div className="relative w-full aspect-video">
             <Image
@@ -67,10 +68,10 @@ function ProjectModal({
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-lime-500 hover:underline"
+            className="inline-flex justify-center gap-2 items-center text-lime-500 hover:underline"
           >
             
-            Visit Project
+            Visit Project <IoUnlink className="hover:underline"/> 
           </a>
         </div>
       </div>
@@ -114,7 +115,7 @@ const projects = [
     description: "A Go backend API with Gemini 1.5 to generate response based on users prompt.",
     longDescription:
       "Gomini is a powerful backend API built with Go that leverages Google's Gemini 1.5 AI model to generate intelligent responses based on user prompts. The API handles natural language processing tasks efficiently and provides accurate, context-aware responses.",
-    cover: "/gomini.png",
+    cover: "/gomini.webp",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://github.com/ojuss/gemini-go",  
@@ -125,7 +126,7 @@ const projects = [
     description: "Demonstration of how to integrate Stripe Payment API with a Go backend.",
     longDescription:
       "A comprehensive implementation of Stripe's Payment Intent API integrated with a Go backend. This project showcases secure payment processing, webhook handling, and best practices for implementing payment flows in web applications.",
-    cover: "/stripe-gateway.png",
+    cover: "/stripe-gateway.webp",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://github.com/ojuss/stripe-payment-intent",
@@ -136,7 +137,7 @@ const projects = [
     description: "Helping students with course relevant resources.",
     longDescription:
       "Collabdoor is an educational platform designed to help students find and share course-relevant resources. It features a collaborative environment where students can upload, discover, and discuss learning materials specific to their courses.",
-    cover: "/collabdoor.png",
+    cover: "/colabdoor.webp",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://collabdoor.github.io/dumbAF/",
@@ -147,7 +148,7 @@ const projects = [
     description: "A modern portfolio website for a scientific illustrator.",
     longDescription:
       "A comprehensive implementation of Stripe's Payment Intent API integrated with a Go backend. This project showcases secure payment processing, webhook handling, and best practices for implementing payment flows in web applications.",
-    cover: "/illustrations.png",
+    cover: "/illustrations.webp",
     coverWidth: 320,
     coverHeight: 780,
     url: "https://oshgupta.com",

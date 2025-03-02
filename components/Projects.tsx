@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ProjectGrid from "@/components/ProjectGrid";
 
 export default function Projects() {

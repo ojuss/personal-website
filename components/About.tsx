@@ -10,7 +10,7 @@ export default function About() {
         Finally here is me! Thanks for checking out my portfolio.
       </p>
       <div className="flex ">
-        <Image src="/about-pic2.jpg" alt="Ojus" width={300} height={200} />
+        <Image src="/about-pic2.webp" alt="Ojus" width={300} height={200} />
       </div>
     </div>
   );
