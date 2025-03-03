@@ -9,7 +9,7 @@ export default function Pixelated({ isMuted }: PixelatedProps) {
 
   return (
     <div
-      className="absolute top-0 left-20 md:left-40 w-full pointer-events-none"
+      className="absolute top-0 left-0 md:left-40 w-full pointer-events-none"
       ref={containerRef}
     >
 

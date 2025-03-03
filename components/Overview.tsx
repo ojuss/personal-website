@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Overview() {
 
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const handleToggleMute = () => {
 
     setIsMuted(!isMuted);
@@ -15,11 +15,11 @@ export default function Overview() {
 
   return (
     <div className="relative flex justify-center w-full -mt-28">
-
       <Pixelated isMuted={isMuted} />
+      
 
       <div className="relative mt-[200px] space-y-4">
-        <h1 className="text-5xl font-bold text-lime-400">[ ojus ]</h1>
+        <h1 className="text-5xl font-bold text-lime-400"> ojus_ </h1>
 
         <p className="leading-relaxed text-white">
           Hello world! I'm Ojus, a computer science undergrad{" "}
@@ -90,7 +90,7 @@ export default function Overview() {
           I am currently a software engineer at{" "}
           <Link
             href="https://hammerai.com"
-            className="text-lime-200 relative underline group"
+            className="text-lime-200 hover:underline"
           >
             Hammer AI
           </Link>
